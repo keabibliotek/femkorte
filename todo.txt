@@ -1,0 +1,15 @@
+TODO
+
+Mapperne video og grafik:
+	- Filnavne omdøbes til camelCase (+ opdateres i html og css filer)
+	- fjerne overflødige filer (ældre videoer + billeder)
+
+Alle HTML + css filer
+	- omdøbe IDer (formaal-afsender-etc) til generiske (m1-m5)
+	- omdøbe modaler ifht ovenstående
+	- rette kodekommentarer til så der er overensstemmelse mellem frontend og kode
+
+laesning.html + noter.html:
+	- fjerne subs 
+	- omdøbe modaler
+	- fjerne overflødig kode

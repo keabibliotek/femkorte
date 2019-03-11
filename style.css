@@ -1,0 +1,504 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*alle container elementer sat til 100% for at fylde hele skærmens højde*/
+html, body, .container-fluid, .row, .row > div {
+  height: 100%;
+}
+
+html{
+	font-size: calc(0.5rem + 0.5vw);
+}
+
+body{
+  min-height: 500px;
+  background-color: black; /*baggrundsfarve sort for markant hover effekt*/
+}
+
+/* Hovedmenu*/
+
+.menu a {
+    padding: 1rem;
+	margin-top: 5px;
+    text-decoration: none;
+    font-size: 3rem;
+	font-family: Lato;
+    color: #f1f1f1;
+    /*display: block;*/
+    transition: 0.3s;
+	line-height: 3rem;
+}
+
+.top{ 
+	position: relative;
+	height: 4rem;}
+
+#kilder {	
+  background: linear-gradient(to left, black 50%, #40BEDD 50%);
+  background-size:200% 100%;
+  background-position: right bottom;
+  border-left: solid #40BEDD 3rem;
+}
+
+#kilder:hover, #kildekritik:focus {
+  background-position: left bottom;
+  transition: ease-in-out 0.2s;
+}
+
+#noter {
+  background: linear-gradient(to left, black 50%, #F28822 50%);
+  background-size:200% 100%;
+  background-position: right bottom;
+  border-left: solid #F28822 3rem;
+}
+
+#noter:hover {
+  background-position: left bottom;
+  transition: ease-in-out 0.2s;
+}
+
+#laesning {
+  background: linear-gradient(to left, black 50%, #1AAB8B 50%);
+  background-size:200% 100%;
+  background-position: right bottom;
+  border-left: solid #1AAB8B 3rem;
+}
+
+#laesning:hover {
+  background-position: left bottom;
+  transition: ease-in-out 0.2s;
+}
+
+
+#planlaegning {
+  background: linear-gradient(to left, black 50%, #DD4863 50%);
+  background-size:200% 100%;
+  background-position: right bottom;
+  border-left: solid #DD4863 3rem;
+}
+
+#planlaegning:hover {
+  background-position: left bottom;
+  transition: ease-in-out 0.2s;
+}
+
+
+#research {
+  background: linear-gradient(to left, black 50%, #8D80AD 50%);
+  background-size:200% 100%;
+  background-position: right bottom;
+  border-left: solid #8D80AD 3rem;
+}
+
+#research:hover {
+  background-position: left bottom;
+  transition: ease-in-out 0.2s;
+}
+
+#femkortemenulogo {
+  background-image: url('grafik/5logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#appmenulogo {
+  background-image: url('grafik/applogo.svg');
+  margin-top:30px;
+  width: 5rem;
+  min-height: 5rem;
+  background-repeat: no-repeat;
+}
+
+#omAppen {
+  background: url('grafik/om-sprite.svg');
+  cursor: pointer;
+  width:2.5rem;
+  min-height:2.5rem;
+  background-position:left;
+  background-repeat: no-repeat;
+  background-size:200%;
+}
+
+#omAppen:hover {
+  background: url('grafik/om-sprite.svg');
+  cursor: pointer;
+  width:2.5rem;
+  min-height:2.5rem;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size:200%;
+}
+
+#femlogo {
+  background: url('grafik/5logo.svg');
+  height: 3.5rem;
+  width: 3.5rem;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:contain;	
+}
+
+
+/*Breakpoints
+
+.kategori: position sættes for at kunne placere elementerne, top sættes til 50% for at centrere teksten i elementet, transform sættes med translateY for at få teksten det sidste stykke op.
+
+.toptekst: display sættes for at vise/ikke-vise teksten.
+
+(kan nok med fordel ændres til JS, så vi kan toggle en hel klasse af gangen, i stedet for at sætte ny value for hver attribute enkeltvis hver gang).
+
+*/
+
+/* Small devices (767px and down) */
+@media (max-width: 767px) {  
+  .kategori {font-size:2.5rem; position:relative; float:left; transform: translateY(-50%)} /*1rem = 16px*/
+  .toptekst, .mellemtekst{display:none;}
+  hr, h5 {display: none;}
+  .ikon {float:right;}
+  .flex-sm-column {height: 90%; width:100%;flex-direction: column;}
+  .bogmaerke {width: 100%; height: 30%; border-left: 0; border-right: 0; border-top: 1px solid white; border-bottom: 1px solid white;}
+  .w-50{width:100%;}
+}
+ 
+/* Medium & large devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+  .kategori {font-size:1.7rem; position:relative; float:none; transform:translateY(0%);}
+  .toptekst{font-size: 0.8rem; margin-top:20px; display:inherit;}
+  .mellemtekst{font-size: 1rem; margin-top:40px;display:inherit;}
+  .flex-md-row{height:90%;}
+  .ikon {float:none;}
+  .bogmaerke {
+    height: 100%;
+    border-bottom: 0px;
+    width: 25%; 
+    border: 2px solid white;
+  }
+  hr, h5 {display: block;}
+	
+}
+
+/* TOP BOKS*/
+#generelt {
+  height:10%;	
+  width: 100%;
+  font-size:.7rem; 
+  color: #fff;
+  border: 2px solid white;
+  border-bottom: 0px solid white;
+}
+
+#generelt h1 {
+  font-family: Lato;
+  font-weight: 500;
+}
+
+#generelt h6 {
+  font-size: .7rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#femkortelogo {
+  height:3rem;
+}
+
+#kealogo {
+  height: 2rem;
+}
+
+#hamburgermenu {
+  background: url('grafik/menu-icon.svg');
+  cursor: pointer;
+  width:2rem;
+  min-height:2rem;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:200%;
+}
+
+#apptitle{
+  font-family: roboto;
+  font-size:1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: title 1s ease-in-out;	
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+  margin-left:0.5rem;
+}
+@keyframes title{ 
+  0% { width: 0%;}
+  100% { width: 100%;}
+ /* from {color: #40BEDD;}
+    to {color: white;}*/
+}
+
+#play-icon {
+  background: url('grafik/play-sprite.svg') 0px 0px;
+  width:2rem;
+  min-height:2rem;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size:200%;
+}
+
+#play-icon:hover {
+  background: url('grafik/play-sprite.svg') 0px 0px;
+  cursor: pointer;
+  width:2rem;
+  min-height:2rem;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size:200%;
+}
+
+#henvisninger-icon {
+  background: url('grafik/henvisninger-sprite.svg');
+  width:2rem;
+  min-height:2rem;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size:200%;
+}
+
+#henvisninger-icon:hover {
+  background: url('grafik/henvisninger-sprite.svg');
+  cursor: pointer;
+  width:2rem;
+  min-height:2rem;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size:200%;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+/*Overlay*/
+
+#overlay-preload {
+	background: rgba(0,0,0,0.8);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	color: #ffffff;
+	font-size: 6rem;
+	text-align: center;
+	display: flex; 
+ 	align-items: center;
+    justify-content: center;
+}
+
+#overlay-preload span {
+	font-family: "Roboto";
+}
+
+/*fælles css for alle bogmaerker*/
+.bogmaerke {
+  font-family: "Roboto";
+  font-weight: 700;
+  color:aliceblue;
+  column-break-inside: avoid;
+  display: inline-block; /* forhindre at cards fordeler sig over flere rækker ved 1-række visning (små enheder) */
+  padding: 1px;
+  transition: opacity .8s;
+	/*  transition: ease-in-out .8s;
+*/}
+
+.bogmaerke:hover{ 
+  outline-width: 0px;
+  outline-style: solid;
+  outline-color: rgba(50,50,50,1);
+  outline-offset: -5px;
+  z-index: 1;
+  transition: opacity .8s;
+  cursor:pointer;
+}
+
+.kategori{
+  white-space: nowrap;
+  overflow: visible;
+  padding-left:0.5em;
+}
+
+.mellemtekst {
+  margin-top: 0px;
+}
+
+.ikon {
+  width:12vw;
+  height:12vh;
+  min-height: 50px;
+  min-width: 50px;
+  position:relative;
+}
+
+/*FARVER på bogmærker*/
+#generelt, .topbar, .modal-content .modal-header {
+background-color: #233249;
+}
+
+#afsender, #afsenderModal .modal-content .modal-header, #afsenderModal .modal-content .modal-body {
+	background-color: rgb(61, 188, 220);
+}
+
+#relevans, #relevansModal .modal-content .modal-header, #relevansModal .modal-content .modal-body {
+	background-color: rgb(245,140,15); /*rgb(29,122,35) - rgb(43,179,52)*/
+}
+#aktualitet, #aktualitetModal .modal-content .modal-header, #aktualitetModal .modal-content .modal-body {
+  background-color: rgb(0,171,138);
+ /*background-image: -webkit-linear-gradient(rgb(0,171,138));*/;
+  /*background-image: -o-linear-gradient(rgb(0,171,138));*/;
+ /*background-image: linear-gradient(rgb(0,171,138));*/;
+}
+
+#motiv, #motivModal .modal-content .modal-header, #motivModal .modal-content .modal-body{
+  background-color: rgb(223,70,97);
+}
+
+#argument, #argumentModal .modal-content .modal-header, #argumentModal .modal-content .modal-body{
+  background-color: rgb(142,127,174);
+}
+
+.modal-body { /*gradient på modal body*/
+  background: linear-gradient(180deg, rgba(255,255,0,0), rgba(0,0,0,.1));
+}
+
+/* HOVER */
+.overlay-darken {
+  opacity: .4;
+}
+
+.overlay-highlight {
+  opacity: 1;
+}
+
+/* HEADERS */
+h4 {
+  margin-top:20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+}
+
+h6 {
+  margin-bottom: 0px;
+  text-transform: uppercase; /*under-overskrit i store bogstaver*/
+}
+
+p.broedtekst{
+	font-size: 1.2em;
+	font-family: Lato;
+}
+
+p.kildetekst{
+	font-size: 0.8em;
+	font-family: Lato;
+}
+
+h2.topoverskrift{
+	font-family: Lato;
+}
+
+div.modaltekst{
+	margin:1.5em;
+}
+
+.linje{
+	display:block;
+}
+
+/*MODAL styling*/
+.modal-header {
+  max-height: 5rem;
+}
+
+.modal-header p {
+  color: #eee;
+  line-height: 0.9rem;
+  font-size: .9rem;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+.modal-header img {
+  height: 4rem;
+  width: 4rem;
+}
+
+.modal-title{
+  text-transform: uppercase;
+  color: #eee;
+  float:left;
+  width:50%;
+}
+
+.modal-body {
+  color: #eee;
+}
+
+.topimage{
+ 	width:100%;
+}
+
+.modal-content{
+  border: 1px solid white; /*fjerner hvid border i header og fooder*/
+}
+
+.embed-responsive .embed-responsive-item{
+  padding:10px; /*padding udenom embedded youtube video*/
+}
+.close{
+  color:white;
+  font-size: 2rem;
+  margin-top: -.5rem;
+}
+
+.close:hover{color:white; opacity:50%;}
+
+/*liste under videoer*/
+
+ ul, ol{
+        /*margin: 0;padding: 0;*/
+        list-style: none;
+        line-height: 2rem; /*centrer tekst vertikalt*/
+    }
+    li {
+        background: #434A5430;
+        color: #fff;
+        counter-increment: myCounter;
+        margin: 0 0 10px 0;
+        padding: 7px;
+        position: relative;
+        top: 0.5em;
+        border-radius:  0em 0em 1em 1em;
+        /*border-right: 2px dotted rgba(255, 255, 255, 0.2);*/
+        /*border-bottom: 2px dotted rgba(255, 255, 255, 0.2);*/
+        padding-left: 1.7em;
+        font-size: 1.2em;
+        font-family: Lato;
+        min-height: 50px;
+    }
+    li:before{
+        content: counter(myCounter, decimal-leading-zero);
+        display: inline-block;
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 1.2em;
+        background-color: #868686;
+        padding: 10px;
+        font-weight: bold;
+        position: absolute; 
+        top: 0;
+        left: -30px;
+        border-radius: 50%;
+        border: solid 1px rgba(255, 255, 255, .5);
+        font-family: Lato;
+    }
