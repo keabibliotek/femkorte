@@ -30,6 +30,19 @@ body{
 	line-height: 3rem;
 }
 
+.message {
+	padding: 1rem;
+    text-decoration: none;
+    font-size: 3rem;
+	font-family: Lato;
+    color: #f1f1f1;
+    /*display: block;*/
+    transition: 0.3s;
+	cursor:pointer;
+	line-height: 0rem;
+} 
+
+
 .top{ 
 	position: relative;
 	height: 4rem;}

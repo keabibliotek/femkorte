@@ -37,8 +37,8 @@
 			<div id="kilder" class="p-2 m-1"><a href="javascript:delay('kilder.html')">Kilder</a></div>
 			<div id="noter" class="p-2 m-1"><a href="javascript:delay('noter.html')">Noter</a></div>
 			<div id="laesning" class="p-2 m-1"><a href="javascript:delay('laesning.html')">Studielæsning</a></div>
-			<!--<div id="planlaegning" class="p-2 m-1"><a href="javascript:delay('planlaegning.html')">Planlægning</a></div>
-			<div id="research" class="p-2 m-1"><a href="javascript:delay('research.html')">Research</a></div>-->
+		  <div id="planlaegning" class="p-2 m-1" onclick="planlaegning()"><p id="planlaegningText" class="message">Planlægning</p></div>
+		  <div id="research" class="p-2 m-1" onclick="research()"><p id="researchText" class="message">Research</p></div>
 			<div id="appmenulogo" class="align-self-end"></div>
 		</div>
 </div>	
@@ -133,6 +133,17 @@
 		function delay (URL) {
 		  setTimeout( function() { window.location = URL }, 200);
 		}
+		
+		function planlaegning() {
+		  document.getElementById("planlaegningText").innerHTML = "Udvikles";
+  		  setTimeout(function(){document.getElementById("planlaegningText").innerHTML = "Planlægning";},1000);
+		}
+		
+		function research() {
+		  document.getElementById("researchText").innerHTML = "Udvikles";
+  		  setTimeout(function(){document.getElementById("researchText").innerHTML = "Research"},1000);
+		}
+
 	</script>
 </body>
 </html>
