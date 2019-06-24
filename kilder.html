@@ -127,8 +127,15 @@
 			</button>
 	      </div>
 	  	  	<div class="embed-responsive embed-responsive-16by9">
+				
+					<!--<iframe src="https://www.youtube.com/embed/7OdcWb97cpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+				
+					<!--<object data="http://www.youtube.com/embed/7OdcWb97cpk"
+   					width="560" height="315">
+					</object>-->
+				
 	  	  		<video controls preload="metadata" poster="grafik/generelt.png">
- 					<source src="video/Generelt.mp4" type="video/mp4">
+ 					<source src="https://bibliotek.kea.dk/images/femKorte/Kilder_Intro.mp4" type="video/mp4">
 					<track src="subs/generelt_en.vtt" kind="subtitles" srclang="en" label="English">
  				</video>
 			</div>
@@ -163,7 +170,7 @@
 				<br><br>
 				Der er ikke ét kildehenvisningssystem, der er bedre end de andre, men det er vigtigt at bruge det valgte system konsekvent, og ikke blande dem sammen efter behag!
 				<br><br>
-				Læs meget mere om kildehenvisninger på <strong>www.stopplagiat.nu</strong>  
+				Læs meget mere om kildehenvisninger på <strong>https://bibliotek.kea.dk/da/værktøjer/henvisninger</strong>  
 				<br>
 				</p>
 			  </div>
@@ -186,8 +193,9 @@
 			</button>
 	      </div>
 	  	  	<div class="embed-responsive embed-responsive-16by9">
+				<!--<iframe src="https://www.youtube.com/embed/HbpokqJOR2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 	  	  		<video controls preload="metadata" poster="grafik/afsender.png">
- 					<source src="video/Afsender.mp4" type="video/mp4">
+ 					<source src="https://bibliotek.kea.dk/images/femKorte/Kilder_Afsender.mp4" type="video/mp4">
 					<track src="subs/afsender_en.vtt" kind="subtitles" srclang="en" label="English">
  				</video>
 			</div>
@@ -215,8 +223,9 @@
 			</button>
 	      </div>
 	  	  	<div class="embed-responsive embed-responsive-16by9">
+				<!--<iframe src="https://www.youtube.com/embed/Cj5dJLQzxa8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 	  	  		<video controls preload="metadata" poster="grafik/relevans.png">
- 					<source src="video/Relevans.mp4" type="video/mp4">
+ 					<source src="https://bibliotek.kea.dk/images/femKorte/Kilder_Relevans.mp4" type="video/mp4">
 					<track src="subs/relevans_en.vtt" kind="subtitles" srclang="en" label="English">
  				</video>
 			</div>
@@ -244,8 +253,9 @@
 			</button>
 	      </div>
 	  	  	<div class="embed-responsive embed-responsive-16by9">
+				<!--<iframe src="https://www.youtube.com/embed/tEU1eVAYeLU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 	  	  		<video controls preload="metadata" poster="grafik/argument.png">
- 					<source src="video/Argument.mp4" type="video/mp4">
+ 					<source src="https://bibliotek.kea.dk/images/femKorte/Kilder_Argument.mp4" type="video/mp4">
 					<track src="subs/argument_en.vtt" kind="subtitles" srclang="en" label="English">
  				</video>
 			</div>
@@ -273,8 +283,9 @@
 			</button>
 	      </div>
 	  	  	<div class="embed-responsive embed-responsive-16by9">
+				<!--<iframe src="https://www.youtube.com/embed/SXmn6V6sYJY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 	  	  		<video controls preload="metadata" poster="grafik/motiv.png">
- 					<source src="video/Motiv.mp4" type="video/mp4">
+ 					<source src="https://bibliotek.kea.dk/images/femKorte/Kilder_Motiv.mp4" type="video/mp4">
 					<track src="subs/motiv_en.vtt" kind="subtitles" srclang="en" label="English">
  				</video>
 			</div>
@@ -302,8 +313,9 @@
 			</button>
 	      </div>
 	  	  	<div class="embed-responsive embed-responsive-16by9">
+				<!--<iframe src="https://www.youtube.com/embed/dGHnO-YXj1U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 	  	  		<video controls preload="metadata" poster="grafik/aktualitet.png">
- 					<source src="video/Aktualitet.mp4" type="video/mp4">
+ 					<source src="https://bibliotek.kea.dk/images/femKorte/Kilder_Aktualitet.mp4" type="video/mp4">
 					<track src="subs/aktualitet_en.vtt" kind="subtitles" srclang="en" label="English">
  				</video>
 			</div>
@@ -342,6 +354,16 @@
 			$videoSrc = $(this).data( "src" ); //set source URL fra bogmærke
 		})
 
+		
+		
+		// standser youtube afspilning når modal lukkes
+		/*$('.modal').on('hide.bs.modal', function(e) {    
+		var $if = $(e.delegateTarget).find('iframe');
+		var src = $if.attr("src");
+		$if.attr("src", '/empty.html');
+		$if.attr("src", src);
+});*/
+		
 		// pauser afspilning når modal lukkes
 		$('body').on('hidden.bs.modal', '.modal', function () {
 			$('video').trigger('load'); //ændret til load
@@ -354,10 +376,6 @@
 		$(window).on('load',function() {
 			$('#overlay-preload').delay(200).fadeOut('slow');
 		});
-		
-		/*//Sætter logo til emne
-		document.getElementById("femkortelogo").style.backgroundImage = "url('grafik/5kortekilderlogo.svg')";*/
-	
 	</script>
 </body>
 </html>
